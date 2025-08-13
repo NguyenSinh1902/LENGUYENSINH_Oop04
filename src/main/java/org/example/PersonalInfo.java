@@ -14,6 +14,10 @@ public class PersonalInfo {
 
         System.out.print("Enter your age: ");
         age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Enter your index: ");
+        String index = scanner.nextLine();
 
         //output
         System.out.println("Your name is " + name + "you are is" + age);
