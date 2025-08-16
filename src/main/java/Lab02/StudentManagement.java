@@ -104,15 +104,26 @@ public class StudentManagement {
         s.address = scanner.nextLine();
 
         // Gender
-        while (true) {
-            System.out.print("Enter Gender (male/female): ");
+//        while (true) {
+//            System.out.print("Enter Gender (male/female): ");
+//            s.gender = scanner.nextLine().toLowerCase();
+//            if (s.gender.equals("male") || s.gender.equals("female")) {
+//                break;
+//            } else {
+//                System.out.println("Gender must be male or female.");
+//            }
+//        }
+
+        do{
+            System.out.print("Enter Student Gender: ");
             s.gender = scanner.nextLine().toLowerCase();
             if (s.gender.equals("male") || s.gender.equals("female")) {
                 break;
             } else {
                 System.out.println("Gender must be male or female.");
             }
-        }
+
+        }while (!(s.gender.equals("male") || s.gender.equals("female")));
 
         // Email
         System.out.print("Enter Email: ");
@@ -145,6 +156,9 @@ public class StudentManagement {
                 students[i].display();
                 return;
             }
+            //else {
+//                System.out.println("ID does not match.");
+//            }
         }
         System.out.println("Student not found!");
     }
