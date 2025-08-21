@@ -50,6 +50,8 @@ public class ItemList {
 
     public void displayItemsByType(String type) {
         for (int i = 0; i < numOfItem; i++) {
+
+            //if ("Vase".equalsIgnoreCase(type) && list[i] instanceof Vase)
             if (type.equalsIgnoreCase("Vase") && list[i] instanceof Vase) {
                 System.out.println(list[i]);
             } else if (type.equalsIgnoreCase("Statue") && list[i] instanceof Statue) {
