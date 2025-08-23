@@ -6,31 +6,13 @@ public class Product {
     private double price;
     private int quantityInStock;
 
-    // Constructor
     public Product(int productID, String name, double price, int quantityInStock) {
-        if (productID <= 0) {
-            throw new IllegalArgumentException("Product ID must be greater than 0.");
-        }
-
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Product name cannot be empty.");
-        }
-
-        if (price < 0) {
-            throw new IllegalArgumentException("Price must be non-negative.");
-        }
-
-        if (quantityInStock < 0) {
-            throw new IllegalArgumentException("Quantity must be non-negative.");
-        }
-
-        this.productID = productID;
-        this.name = name;
-        this.price = price;
-        this.quantityInStock = quantityInStock;
+        this.setProductID(productID);
+        this.setName(name);
+        this.setPrice(price);
+        this.setQuantityInStock(quantityInStock);
     }
 
-    // Getters and Setters
     public int getProductID() {
         return productID;
     }
@@ -75,7 +57,6 @@ public class Product {
         this.quantityInStock = quantityInStock;
     }
 
-    // Display product
     public void displayProductInfo() {
         System.out.println("Product ID: " + productID);
         System.out.println("Name: " + name);
