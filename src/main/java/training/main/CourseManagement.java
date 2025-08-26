@@ -21,7 +21,7 @@ public class CourseManagement {
         Course course = new Course();
         course.input(sc, courses);
         courses.add(course);
-        System.out.println("✅ Course added successfully!");
+        System.out.println("Course added successfully!");
     }
 
     // Search

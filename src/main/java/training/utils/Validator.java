@@ -23,7 +23,7 @@ public class Validator {
 
     // Validate status
     public static boolean validateStatus(boolean status) {
-        return status == true || status == false; // luôn hợp lệ, nhưng viết để rõ
+        return status == true || status == false;
     }
 
     // Validate flag
